@@ -2,11 +2,17 @@ import React from 'react'
 
 function Alert(props) {
     return (
-        <div className='container my-3'>
-            <div className="alert alert-info" role="alert">
-                {props.message}
+        <>
+            <div className='container' style={{ height: '15px' }}>
+                {props.alert &&
+                    <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+                        {/*<strong>Holy guacamole!</strong> You should check in on some of those fields below.*/}
+                        <strong>{props.alert.msg}</strong>
+                        {/*<button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>*/}
+                    </div>
+                }
             </div>
-        </div>
+        </>
     )
 }
 

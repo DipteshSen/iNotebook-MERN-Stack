@@ -7,7 +7,7 @@ const Noteitem = (props) => {
 
     const {deleteNote}=context;
 
-    const { note } = props;
+    const { note,updateNote } = props;
 
     //If image src is broken then image wont be shown...
     const handleImageError = (event) => {
@@ -22,8 +22,8 @@ const Noteitem = (props) => {
                     <div className="card-body">
                         <h5 className="card-title">{note.title}</h5>
                         <p className="card-text">{note.description}</p>
-                        <i onClick={()=>{deleteNote(note._id)}} style={{cursor:"pointer"}} className="fa-solid fa-trash-can"></i>
-                        <i style={{cursor:"pointer",marginLeft:"10px"}} className="fa-solid fa-pen-to-square"></i>
+                        <i onClick={()=>{deleteNote(note._id);props.showAlert("Deleted Sucessfully","warning")}} style={{cursor:"pointer"}} className="fa-solid fa-trash-can"></i>
+                        <i onClick={()=>{updateNote(note)}} style={{cursor:"pointer",marginLeft:"10px"}} className="fa-solid fa-pen-to-square"></i>
                     </div>
                 </div>
             </div>
