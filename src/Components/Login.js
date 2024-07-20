@@ -15,7 +15,6 @@ const Login = (props) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY4NzRhNDZjNzk5Yzk1YTFkNDU4ZGQ0In0sImlhdCI6MTcyMDE1NjE1OH0.Zzo-D3ztOshNm1axVqM1GG7F5amnLEFshseoI0IjNTg",
 
             },
             body: JSON.stringify({
